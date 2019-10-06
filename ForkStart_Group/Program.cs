@@ -253,12 +253,12 @@ namespace _2019_Fall_Assignment2
             {
                 string copy = s;
 
-                if (!s.SequenceEqual(s.Reverse()))
+                if (!s.SequenceEqual(s.Reverse())) //initial palindrome check
                 {
 
                     foreach (char ch in copy)
                     {
-                        copy = s.Replace(ch.ToString(), string.Empty);
+                        copy = s.Replace(ch.ToString(), string.Empty); //remove each and every character and see
                         if (copy.SequenceEqual(copy.Reverse()))
                         {
                             return true;
